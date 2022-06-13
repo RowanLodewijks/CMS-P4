@@ -35,6 +35,7 @@
 				<!-- EINDE NAVBAR -->
 				<img src='<?php bloginfo('template_url'); ?> /imgs/couple-exercising2.jpg' class='img-fluid img-fit' alt="Couple exercising">
 				<div class="header-text">
+					
 					<h1>Fitness in a can</h1>
 					<h3>Yes you can</h3>
 				</div>
@@ -52,17 +53,25 @@
 				if (have_posts()) {
 					while (have_posts()) {
 						the_post();
+
+						if (is_front_page()){
+							the_post_thumbnail('sidebar-thumb');
+						} else {
+							the_post_thumbnail('home-page');
+						}
+						
 						the_title('<h2>', '</h2>');
+						the_post_thumbnail('custom-page-thumb');
 						the_content();
 					}
 				}
 				?>
 			</div>
 
-
 			<?php get_sidebar(); ?>
 
 		</section>
 
 	</main>
+	
 	<?php get_footer(); ?>

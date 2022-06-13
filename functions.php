@@ -22,3 +22,10 @@
      }
      add_action('init', 'mytheme_menu');
 ?>
+
+<?php
+  add_theme_support( 'post-thumbnails' );
+  add_image_size( 'sidebar-thumb', 605, 600, true );
+  add_image_size( 'custom-page-thumb', 300, 300 );
+  add_image_size( 'home-page', 100, 9999);
+?>

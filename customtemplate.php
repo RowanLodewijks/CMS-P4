@@ -59,4 +59,5 @@ Template Name: CustomTemplate
 		</section>
 
 	</main>
+	
 	<?php get_footer(); ?>
