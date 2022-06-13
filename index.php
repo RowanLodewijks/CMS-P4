@@ -56,13 +56,15 @@
 
 						if (is_front_page()){
 							the_post_thumbnail('sidebar-thumb');
+							the_title('<h2>', '</h2>');
+						  // the_post_thumbnail('custom-page-thumb');
+						  the_content();
 						} else {
-							the_post_thumbnail('home-page');
+							// the_post_thumbnail('home-page');
+							the_title('<h2>', '</h2>');
+							the_post_thumbnail('custom-page-thumb');
+							the_content();
 						}
-						
-						the_title('<h2>', '</h2>');
-						the_post_thumbnail('custom-page-thumb');
-						the_content();
 					}
 				}
 				?>
